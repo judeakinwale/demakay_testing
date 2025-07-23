@@ -1,0 +1,45 @@
+.card {
+  background-color: var(--color-primary-light);
+  border-radius: 6px;
+  padding: 2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 370px;
+  min-width: 350px;
+
+  svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--color-primary-deep);
+  }
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 12px;
+}
+
+.image {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.name {
+  font-weight: 400;
+  font-size: 1.1em;
+}
+
+.title,
+.organization {
+  font-size: 0.875rem;
+  color: gray;
+}
+.author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}

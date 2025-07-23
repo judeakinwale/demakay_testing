@@ -1,0 +1,30 @@
+.tag {
+  border-radius: 4px;
+  padding: 2px 8px 3px 8px;
+  font-size: 0.8em;
+  display: inline-block;
+  z-index: 2;
+}
+
+.child {
+  background: white;
+  color: black;
+}
+
+.standalone {
+  background: var(--color-primary-transparent-2);
+  color: var(--color-primary-deep-2);
+}
+
+.secondary {
+  background: #f2f5f1;
+  color: var(--color-text);
+}
+
+.small {
+  font-size: 0.7em;
+}
+
+.medium {
+  font-size: 1em;
+}

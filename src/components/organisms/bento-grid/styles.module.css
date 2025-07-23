@@ -1,0 +1,147 @@
+.container {
+  display: flex;
+  gap: 1em;
+  padding-block: 2em;
+
+  .col:first-of-type,
+  .col:last-of-type {
+    .row:first-of-type {
+      flex: 0.6;
+    }
+    .row:last-of-type {
+      flex: 0.4;
+      background: var(--color-primary-light);
+    }
+  }
+
+  .col:nth-of-type(2) {
+    .row:first-of-type {
+      flex: 0.4;
+      background: var(--color-primary-light);
+    }
+    .row:last-of-type {
+      flex: 0.6;
+      background: url("/people.webp");
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  .col:first-of-type,
+  .col:last-of-type {
+    .row:first-of-type {
+      position: relative;
+      background: var(--color-primary-deep);
+
+      button {
+        position: absolute;
+        bottom: 1em;
+        left: 1.5em;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: space-between;
+  padding-block: 2em !important;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+
+.col {
+  width: 100%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.row {
+  padding: 0.8em 1.6em;
+  flex: 1;
+  height: 100%;
+  border-radius: 6px;
+  transition: 400ms ease-in-out;
+  &:hover {
+    background-color: var(--color-primary-transparent) !important;
+  }
+}
+
+.backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.title {
+  font-size: 3em;
+  color: white;
+  line-height: 1.2;
+  margin-top: 0.3em;
+}
+
+.row h4 {
+  font-size: 1.5em;
+  color: var(--color-primary-deep-2);
+  /* margin-bottom: 0.5em; */
+}
+
+.row p {
+  font-size: 1em;
+  color: var(--color-primary-deep-2);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    .col .row {
+      flex: 1 !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    .col .row {
+      flex: 1 !important;
+    }
+  }
+}
+
+/* ? ----------------------------- MEDIA QUERIES -------------------------------- */
+
+/* Large devices (desktops, large laptops) */
+@media (min-width: 992px) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Extra large devices (large desktops) */
+@media (min-width: 1200px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+/* Optional: For ultra-wide screens */
+@media (min-width: 1400px) {
+  .title {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,37 @@
+.button {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 12px 16px;
+  font-size: 0.9em;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.primary {
+  background-color: var(--color-primary-transparent-2);
+  color: var(--white);
+
+  &:hover {
+    background-color: var(--color-primary);
+    color: white;
+  }
+}
+
+.secondary {
+  background-color: var(--secondary-color);
+  color: var(--color-primary);
+  background: white;
+  border-color: var(--color-primary);
+}

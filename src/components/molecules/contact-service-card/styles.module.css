@@ -1,0 +1,19 @@
+.card {
+  display: flex;
+  background: #d1d1ff32;
+  justify-content: space-between;
+  padding: 2.4em 1.2em;
+  border-radius: 6px;
+  gap: 10px;
+  flex: 1;
+}
+
+.icon {
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

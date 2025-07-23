@@ -1,0 +1,54 @@
+.cardsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding-block: 1.5em;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.contactFormWrapper {
+  display: flex;
+  gap: 3em;
+  margin-block: 3.2em;
+}
+
+.info {
+  flex: 0.5;
+
+  h2 {
+    font-size: 3em;
+    margin-block: 0.5em;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 0.9em;
+    color: var(--color-text);
+    margin-block: 0.5em;
+  }
+}
+
+/* ? ----------------------------- MEDIA QUERIES -------------------------------- */
+/* Small devices (phones landscape, small tablets) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets landscape, small laptops) */
+@media (max-width: 768px) {
+}
+
+/* Large devices (desktops, large laptops) */
+@media (max-width: 992px) {
+  .contactFormWrapper {
+    flex-direction: column;
+  }
+}
+
+/* Extra large devices (large desktops) */
+@media (min-width: 1200px) {
+}
+
+/* Optional: For ultra-wide screens */
+@media (min-width: 1400px) {
+}

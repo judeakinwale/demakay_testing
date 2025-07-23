@@ -1,0 +1,32 @@
+.firmsWrapper {
+  position: relative;
+  margin-block: 4em;
+
+  img {
+    margin-inline: 2rem;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+
+  img:hover {
+    filter: grayscale(0%) hue-rotate(0deg);
+  }
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 0.5px;
+    background: gainsboro;
+    position: absolute;
+    left: 0;
+  }
+}
