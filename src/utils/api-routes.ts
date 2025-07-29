@@ -2,6 +2,7 @@ const allowedDomain = [
   "http://localhost:3001",
   "https://www.demakayconsulting.ca",
   "https://my-website-ten-inky-55.vercel.app",
+  "https://demakay-testing.vercel.app",
 ];
 
 export function checkBaseUrl(
@@ -20,7 +21,7 @@ export function checkBaseUrl(
 const baseUrl =
   process.env.MODE === "development"
     ? "http://localhost:3001"
-    : "https://www.demakayconsulting.ca";
+    : "https://demakay-testing.vercel.app";
 
 export const routes = {
   REVIEWS: `${baseUrl}/api/reviews`,
