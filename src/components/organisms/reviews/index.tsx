@@ -11,17 +11,29 @@ export const fetchReviews = async (): Promise<{
   success: boolean;
   count: number;
   reviews: ReviewCardProps[];
+  error?: unknown;
 }> => {
   try {
     const response = await fetch(routes.REVIEWS);
     if (!response.ok) {
-      throw new Error("Network response was not ok -> " + response.statusText);
+      return {
+        success: false,
+        count: 0,
+        reviews: [],
+      };
+      // throw new Error("Network response was not ok -> " + response.statusText);
     }
     return await response.json();
   } catch (error) {
-    throw new Error(
-      `Failed to fetch reviews: ${error instanceof Error ? error.message : "Unknown error"}`
-    );
+    return {
+      success: false,
+      count: 0,
+      reviews: [],
+      error,
+    };
+    // throw new Error(
+    //   `Failed to fetch reviews: ${error instanceof Error ? error.message : "Unknown error"}`
+    // );
   }
 };
 
